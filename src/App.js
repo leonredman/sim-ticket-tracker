@@ -4,8 +4,8 @@ import DemoLogin from './components/DemoLogin';
 //import AccountRegister from './components/AccountRegister';
 
 
-
-export default () => {
+const widgetz = () => { //this fixes error
+//export default () => {
     return(
         <div className="ui container">
             <div className="ui grid">
@@ -26,3 +26,4 @@ export default () => {
         </div>
    );
 };
+export default widgetz; // this fixes error
