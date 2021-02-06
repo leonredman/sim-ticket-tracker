@@ -1,6 +1,7 @@
 import React from 'react';
 import LoginForm from './components/LoginForm';
 import DemoLogin from './components/DemoLogin';
+import SideMenu from './components/SideMenu';
 //import AccountRegister from './components/AccountRegister';
 
 
@@ -10,15 +11,19 @@ const widgetz = () => { //this fixes error
         <div className="ui container">
             <div className="ui grid">
                 <div className="ui row">
+                <div className="four wide column">
+                    <SideMenu />
+                    </div>
                     <div className="six wide column">
                         <LoginForm />
                     </div>
                     
-                    <div className="eight wide column">
+                    <div className="six wide column">
                             <DemoLogin />
                     </div>
                 </div>
             </div>
+           
 
             {/* <div className="eight wide column">
                             <AccountRegister />
