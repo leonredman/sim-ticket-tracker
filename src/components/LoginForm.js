@@ -20,7 +20,7 @@ const LoginForm = () => {
                         </label>
                     </div>
                         <br />
-                            <input type="checkbox" checked="checked" name="remember" /> Remember me
+                            <input type="checkbox" name="remember" /> Remember me
                                 <br />
                                 <br />
                                     <input type="submit" value="Submit" />
