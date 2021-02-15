@@ -46,7 +46,7 @@ const dashboard = () => {
                 <div className="column">
                     <div className="ui red segment">
                         New Tickets<br />
-                        <table class="ui single line table">
+                        <table className="ui single line table">
                             <thead>
                                 <tr>
                                 <th>Summary</th>
@@ -82,7 +82,7 @@ const dashboard = () => {
                     <div className="column">
                     <div className="ui blue segment">
                         Tickets In Progress<br />
-                        <table class="ui single line table">
+                        <table className="ui single line table">
                             <thead>
                                 <tr>
                                 <th>Summary</th>
@@ -130,7 +130,7 @@ const dashboard = () => {
 <div className="column">
 <div className="ui green segment">
     Tickets In QA<br />
-    <table class="ui single line table">
+    <table className="ui single line table">
         <thead>
             <tr>
             <th>Summary</th>
