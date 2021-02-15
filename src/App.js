@@ -1,9 +1,9 @@
 import React from 'react';
-import LoginForm from './components/LoginForm';
-import DemoLogin from './components/DemoLogin';
-import SideMenu from './components/SideMenu';
+//import LoginForm from './components/LoginForm';
+//import DemoLogin from './components/DemoLogin';
+//import SideMenu from './components/SideMenu';
 import Header from './components/Header';
-import AccountRegister from './components/AccountRegister';
+//import AccountRegister from './components/AccountRegister';
 import Dashboard from './components/Dashboard';
 
 

@@ -122,7 +122,7 @@ const dashboard = () => {
 <div className="ui violet segment">
     Ticket Status Overview
     <div className="ui fluid image" >
-        <img src="https://chartio.com/assets/25c0ab/tutorials/charts/pie-charts/8f2915ab9024902155c5d27d430831be813de071853c69d778102722a4d0efbf/pie-chart-example-1.png" />
+        <img alt="chart" src="https://chartio.com/assets/25c0ab/tutorials/charts/pie-charts/8f2915ab9024902155c5d27d430831be813de071853c69d778102722a4d0efbf/pie-chart-example-1.png" />
     </div>
     </div>
 </div>
