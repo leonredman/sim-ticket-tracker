@@ -1,9 +1,10 @@
 import './LoginForm.css';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const LoginForm = () => {
    return ( 
-        <div className="loginContainer">
+        <div className="loginContainer">          
             <h1>Log In</h1>
             <form className="ui form">
                 <div className="field">
@@ -27,12 +28,13 @@ const LoginForm = () => {
             </form>
             <br />
                 <div>
-                    <h3>Register as a new User</h3>
+                    <Link to="/AccountRegister" className="item">Register as a new User</Link>
+
                 </div>
                 <br />
                 <div>
-                    <h3>Forgot your Password?</h3>
-                </div>
+                    <Link to="/ResetPassword" className="item">Forgot your Password?</Link>
+                    </div>
         </div>
    );
 };
