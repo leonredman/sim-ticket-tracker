@@ -103,10 +103,10 @@ const WorkTicket = () => {
                                Attachements
                             </div>
                             <div className="three wide column">
-                            <img src="https://placeimg.com/100/100/any" />
+                            <img alt="placeholder1" src="https://placeimg.com/100/100/any" />
                             </div>
                             <div className="three wide column">
-                            <img src="https://placeimg.com/100/100/animals" />
+                            <img alt="placeholder2" src="https://placeimg.com/100/100/animals" />
                             </div>
                         </div>
 
