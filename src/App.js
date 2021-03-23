@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route} from 'react-router-dom';
 //import LoginForm from './components/LoginForm';
 //import DemoLogin from './components/DemoLogin';
 //import SideMenu from './components/SideMenu';
@@ -26,9 +26,9 @@ const tracker = () => { //this fixes error
                 <Route path="/TicketForm" exact component={ TicketForm } />
                 <Route path="/AccountRegister" exact component={ AccountRegister } />
                 <Route path="/ResetPassword" exact component={ ResetPassword } />
-                <Route path="/WorkTicket" exact component={ WorkTicket } />
+                <Route path="/WorkTicket" exact component={ WorkTicket } /> 
 
-
+               
                 </BrowserRouter>
             </div>
          
