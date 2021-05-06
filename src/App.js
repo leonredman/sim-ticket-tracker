@@ -4,12 +4,12 @@ import { BrowserRouter, Route} from 'react-router-dom';
 //import DemoLogin from './components/DemoLogin';
 //import SideMenu from './components/SideMenu';
 import Header from './components/Header';
-import AccountRegister from './components/AccountRegister';
-import TicketForm from './components/TicketForm';
-import Dashboard from './components/Dashboard';
+import AccountRegister from './views/AccountRegister';
+import TicketForm from './views/TicketForm';
+import Dashboard from './views/Dashboard';
 import MainLogin from './components/MainLogin';
-import ResetPassword from './components/ResetPassword';
-import WorkTicket from './components/WorkTicket';
+import ResetPassword from './views/ResetPassword';
+import WorkTicket from './views/WorkTicket';
 
 
 
