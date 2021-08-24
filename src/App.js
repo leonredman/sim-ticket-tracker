@@ -1,65 +1,62 @@
-import React from 'react';
-import { BrowserRouter, Route} from 'react-router-dom';
+import React from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 //import LoginForm from './components/LoginForm';
 //import DemoLogin from './components/DemoLogin';
-//import SideMenu from './components/SideMenu';
-import Header from './components/Header';
-import AccountRegister from './views/AccountRegister';
-import TicketForm from './views/TicketForm';
-import Dashboard from './views/Dashboard';
-import MainLogin from './components/MainLogin';
-import ResetPassword from './views/ResetPassword';
-import WorkTicket from './views/WorkTicket';
+//import SideMenu from "./components/sideMenu/SideMenu";
+import Header from "./components/header/Header";
+import AccountRegister from "./pages/accountRegister/AccountRegister";
+import TicketForm from "./pages/ticketForm/TicketForm";
+import Dashboard from "./pages/adminDashboard/Dashboard";
+import MainLogin from "./components/mainLogin/MainLogin";
+import ResetPassword from "./pages/resetPassword/ResetPassword";
+import WorkTicket from "./pages/workTicket/WorkTicket";
+import UpdateForm from "./pages/updateForm/UpdateForm";
+import DevDashboard from "./pages/DevDashboard/DevDashboard";
+import QaDashboard from "./pages/QaDashboard/QaDashboard";
+import Ws1Dashboard from "./pages/Ws1Dashboard/Ws1Dashboard";
 
-
-
-const tracker = () => { //this fixes error
-//export default () => {
-    return(
-        <div>
-           
-            <div>
-                <BrowserRouter>
-                <Header />
-                <Route path="/" exact component={ MainLogin } />
-                <Route path="/Dashboard" component={ Dashboard } />
-                <Route path="/TicketForm" exact component={ TicketForm } />
-                <Route path="/AccountRegister" exact component={ AccountRegister } />
-                <Route path="/ResetPassword" exact component={ ResetPassword } />
-                <Route path="/WorkTicket" exact component={ WorkTicket } /> 
-
-               
-                </BrowserRouter>
-            </div>
-         
-                    {/* <div className="three wide column">
-                        <SideMenu />
-                    </div> */}
-
-                        {/* <div className="six wide centered column">
-                            <LoginForm />
-                        </div> */}
-                        
-                            {/* <div className="four wide centered column">
-                                    <DemoLogin />
-                            </div> */}
-
-                                {/* <div className="six wide centered column">
-                                    <AccountRegister />
-                                </div> */}
-
-                                {/* <div className="six wide centered column">
-                                    <TicketForm />
-                                </div> */}
-
-                                {/* <div className="sixteen wide column">
-                                    <Dashboard />
-                                </div> */}
-                                
-                {/* </div>
-            </div> */}
-        
-        </div>
-   );
+const tracker = () => {
+  // use switch and create routes to handle url params
+  return (
+    <div>
+      <div>
+        <BrowserRouter>
+          <Header />
+          <Switch>
+            <Route path="/" exact>
+              <MainLogin />
+            </Route>
+            <Route path="/dashboard">
+              <Dashboard />
+            </Route>
+            <Route path="/tickets/:id">
+              <TicketForm />
+            </Route>
+            <Route path="/accountRegister">
+              <AccountRegister />
+            </Route>
+            <Route path="/resetPassword">
+              <ResetPassword />
+            </Route>
+            <Route path="/workTicket/:id">
+              <WorkTicket />
+            </Route>
+            <Route path="/updateForm/:id">
+              <UpdateForm />
+            </Route>
+            <Route path="/devDashboard">
+              <DevDashboard />
+            </Route>
+            <Route path="/qaDashboard">
+              <QaDashboard />
+            </Route>
+            <Route path="/ws1Dashboard">
+              <Ws1Dashboard />
+            </Route>
+          </Switch>
+        </BrowserRouter>
+      </div>
+    </div>
+  );
 };
-export default tracker; // this fixes error
+export default tracker;
