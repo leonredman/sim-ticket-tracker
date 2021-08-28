@@ -2,6 +2,9 @@
   /* margin-left: 0 !important; */
 }
 
+#root > div > div > fragement > div.ui-container-dash {
+  margin-left: 140px;
+}
 /* .three.wide.column {
   background-color: #f4f4f4;
   height: 100vh;
@@ -10,3 +13,28 @@
 /* .ui.vertical.menu {
   width: 13rem;
 } */
+
+#root
+  > div
+  > div
+  > fragement
+  > div.ui.visible.sidebar.blue.inverted.vertical.menu {
+  width: 90px;
+}
+
+#root
+  > div
+  > div
+  > fragement
+  > div.ui.visible.sidebar.blue.inverted.vertical.menu
+  > div:nth-child(1) {
+  margin-top: 50px;
+}
+
+#root
+  > div
+  > div
+  > fragement
+  > div.ui.visible.sidebar.blue.inverted.vertical.menu {
+  margin-top: 53px !important;
+}

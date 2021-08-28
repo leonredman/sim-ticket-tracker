@@ -81,7 +81,7 @@ app.put("/ticket/update/:id", (req, res) => {
 });
 
 //---------- DELETE request by id
-app.delete("/api/delete/:id", (req, res) => {
+app.delete("/ticket/delete/:id", (req, res) => {
   const id = req.params.id;
   DB.query("DELETE FROM ticket_info WHERE id = ?", id, (err, result) => {
     if (err) {

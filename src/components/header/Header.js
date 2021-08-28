@@ -22,15 +22,6 @@ const Header = () => {
       <Link to="/WorkTicket" className="item">
         Work Ticket
       </Link>
-      <Link to="/DevDashboard" className="item">
-        Dev-Dash
-      </Link>
-      <Link to="/QaDashboard" className="item">
-        QA-Dash
-      </Link>
-      <Link to="/Ws1Dashboard" className="item">
-      WS1-Dash
-    </Link>
     </div>
   );
 };
