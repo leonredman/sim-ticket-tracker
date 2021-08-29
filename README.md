@@ -1,12 +1,15 @@
-# Getting Started with Create React App
+# Simple Issue Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simplified Jira clone built with React and Node bootstrapped with Create React App.
 
 ## Available Scripts
 
 In the project directory, you can run:
 
 ### `npm start`
+
+localhost: 3000 for front end and use `npm start` to run in the terminal
+localhost: 3001 for back end with express `npm run dev` in termial to start
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -68,3 +71,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+//"proxy": "http://localhost:3001/",

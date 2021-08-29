@@ -1,0 +1,17 @@
+#loginImage {
+  background-image: url("/Users/leonredman/projects/ticket-tracker/src/images/cityscape.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 707px;
+  
+}
+
+.ui-container-login {
+  height: 95vh;
+ 
+}
+
+.ui[class*="center aligned"].grid {
+  padding-top: 50px;
+
+}
