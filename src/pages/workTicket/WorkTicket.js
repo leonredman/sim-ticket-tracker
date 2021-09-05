@@ -39,123 +39,171 @@ const WorkTicket = () => {
   };
 
   return (
-    <div className=" ui container">
+    <div className="ui container">
       <div className="ui divider"></div>
 
       <div className="WorkTicketContainer">
-        <h1>Issue Ticket </h1>
-        Web Design Services
-        <div className="ui divider"></div>
         <div className="ui grid">
           <div className="row">
+            <div className="nine wide column">
+              Web Design Services
+              <h3>Issue Ticket # SIM 9170{workTicket.id} </h3>
+            </div>
+
             <div className="two wide column">
               <Link to={`/UpdateForm/${id}`}>
-                <button className="ui button">Edit</button>
+                <i className="edit outline icon"></i>
+                Edit Ticket
               </Link>
             </div>
-            <div className="two wide column">
-              <button className="ui button">Comment</button>
+
+            <div className="two wide column" style={{ color: "#4183c4" }}>
+              <i
+                className="blue trash alternate outline icon"
+                onClick={() => {
+                  deleteTicket(workTicket.id);
+                }}
+              ></i>
+              Delete Ticket
+            </div>
+            <div className="three wide column">
+              <div
+                className="ui large pointing basic label"
+                style={{ marginTop: 0 }}
+              >
+                {workTicket.status}
+              </div>
             </div>
           </div>
+        </div>
+
+        <h4>
+          Submitted by WS1: {workTicket.websiteSpecialist} on{" "}
+          {workTicket.created}{" "}
+        </h4>
+        <div className="ui divider"></div>
+
+        <div className="ui raised segment">
+          <div className="ui grid">
+            <div className="row"></div>
+            <div className="ui grid">
+              <div className="row">
+                <div className="thirteen wide column">
+                  <h2>
+                    {workTicket.planType} {workTicket.category} Ticket
+                  </h2>
+
+                  <div>Customer Id: {workTicket.customerID}</div>
+                  <br />
+                  <div> Domain: {workTicket.domain}</div>
+                </div>
+                <div className="three wide column">
+                  Priority: {workTicket.priority}
+                  <br />
+                  <br />
+                  Date Due: {workTicket.dueDate}
+                  <br />
+                  <br />
+                  Developer: {workTicket.developer}
+                  <br />
+                  QA Agent: {workTicket.qaAgent}
+                </div>
+              </div>
+
+              <div className="row">
+                <div className="four wide column">
+                  Customer Name: {workTicket.customerName}
+                </div>
+
+                <div className="three wide column">
+                  Email: {workTicket.email}
+                </div>
+                <div className="three wide column">
+                  Phone: {workTicket.phoneNumber}
+                </div>
+              </div>
+
+              <div className="row">
+                <div className="three wide column">Description</div>
+                <div className="eight wide column">
+                  {workTicket.description}
+                </div>
+              </div>
+
+              <div className="row">
+                <div className="sixteen wide column">Attachements</div>
+                <br />
+                <br />
+                <div className="three wide column">
+                  <img
+                    alt="placeholder1"
+                    src="https://placeimg.com/100/100/any"
+                  />
+                </div>
+                <div className="three wide column">
+                  <img
+                    alt="placeholder2"
+                    src="https://placeimg.com/100/100/animals"
+                  />
+                </div>
+
+                <div className="three wide column">
+                  <img
+                    alt="placeholder1"
+                    src="https://placeimg.com/100/100/nature"
+                  />
+                </div>
+                <div className="three wide column">
+                  <img
+                    alt="placeholder1"
+                    src="https://placeimg.com/100/100/castle"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="ui raised segment">
           <div className="ui grid">
             <div className="row">
-              <div className="three wide column">
-                {/*  <h5>Ticket # SIM 9170{val.id}</h5>  */}
-                <h5>Ticket # SIM 9170{workTicket.id}</h5>
+              <div className="column">
+                <h3>Activity</h3>
               </div>
             </div>
 
             <div className="row">
-              <div className="three wide column">
-                Plan Type: -: {workTicket.planType}
+              <div className="column">
+                <i className="blue user circle icon"></i>
               </div>
-              <div className="three wide column">
-                Status -: {workTicket.status}
-              </div>
-              <div className="three wide column">
-                Category -: {workTicket.category}
-              </div>
-              <div className="three wide column">
-                Priority -: {workTicket.priority}
-              </div>
-            </div>
-
-            <div className="row">
-              <div className="three wide column">
-                Customer Name -: {workTicket.customerName}
-              </div>
-              <div className="three wide column">
-                Customer Id -: {workTicket.customerID}
-              </div>
-              <div className="three wide column">
-                Email -: {workTicket.email}
-              </div>
-              <div className="three wide column">
-                Phone # -: {workTicket.phoneNumber}
-              </div>
-            </div>
-
-            <div className="row">
-              <div className="three wide column">
-                Domain -: {workTicket.domain}
-              </div>
-              <div className="three wide column">
-                Date Created -: {workTicket.created}
-              </div>
-              <div className="three wide column">
-                Date Due -: {workTicket.dueDate}
-              </div>
-            </div>
-
-            <div className="row">
-              <div className="four wide column">
-                Website Specialist -: {workTicket.websiteSpecialist}
-              </div>
-              <div className="three wide column">
-                Developer -: {workTicket.developer}
-              </div>
-              <div className="three wide column">
-                QA Agent -: {workTicket.qaAgent}
-              </div>
-            </div>
-
-            <div className="row">
-              <div className="three wide column">Description</div>
-              <div className="three wide column">{workTicket.description}</div>
-            </div>
-
-            <div className="row">
-              <div className="three wide column">Attachements</div>
-              <div className="three wide column">
-                <img
-                  alt="placeholder1"
-                  src="https://placeimg.com/100/100/any"
-                />
-              </div>
-              <div className="three wide column">
-                <img
-                  alt="placeholder2"
-                  src="https://placeimg.com/100/100/animals"
-                />
-              </div>
-            </div>
-
-            <div className="row">
-              <div className="three wide column">History</div>
               <div className="six wide column">
-                PlaceHolder History Feature Text Made Changes 8 hrs ago
+                <h4>Steve Rogers added a comment 6 days ago</h4>
+                <div>Customer Name: Steve Rogers </div>
+                <div>Call Type: Inbound </div>
+                <div> Customer Type: Existing Customer </div>
+                <div>Domain:ThisWorks5.com</div>
+                <div>Reason For Call: CCI to check on status of Ticket</div>
               </div>
             </div>
+
             <div className="row">
-              <div className="two wide column">
-                <button
-                  onClick={() => {
-                    deleteTicket(workTicket.id);
-                  }}
-                  className="ui button"
-                >
-                  Delete
-                </button>
+              <div className="column">
+                <i className="blue user circle icon"></i>
+              </div>
+              <div className="six wide column">
+                <h4>Travis Scott added a comment 4 days ago</h4>
+                <div>Developer Starting Ticket </div>
+              </div>
+            </div>
+
+            <div className="row">
+              <div className="thirteen wide column">
+                <div className="ui form">
+                  <div className="field">
+                    <label>Text</label>
+                    <textarea placeholder="Add a comment..."></textarea>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -166,3 +214,61 @@ const WorkTicket = () => {
 };
 
 export default WorkTicket;
+
+// <div className="row">
+//                 <div className="three wide column">
+//                   Plan Type: -: {workTicket.planType}
+//                 </div>
+//                 <div className="three wide column">
+//                   Status -: {workTicket.status}
+//                 </div>
+//                 <div className="three wide column">
+//                   Category -: {workTicket.category}
+//                 </div>
+//                 <div className="three wide column">
+//                   Priority -: {workTicket.priority}
+//                 </div>
+//               </div>
+
+// <div className="three wide column">
+//                   Customer Name -: {workTicket.customerName}
+//                 </div>
+
+// <div className="three wide column">
+//                   Customer Id -: {workTicket.customerID}
+//                 </div>
+// <div className="three wide column">
+//                   Date Created -: {workTicket.created}
+//                 </div>
+// <div className="row">
+//                 <div className="three wide column">
+//                   Domain -: {workTicket.domain}
+//                 </div>
+
+//                 <div className="three wide column">
+//                   Date Due -: {workTicket.dueDate}
+//                 </div>
+//               </div>
+
+// <div className="row">
+//                 <div className="four wide column">
+//                   Website Specialist -: {workTicket.websiteSpecialist}
+//                 </div>
+//                 <div className="three wide column">
+//                   Developer -: {workTicket.developer}
+//                 </div>
+//                 <div className="three wide column">
+//                   QA Agent -: {workTicket.qaAgent}
+//                 </div>
+//               </div>
+
+// <button
+//                   onClick={() => {
+//                     deleteTicket(workTicket.id);
+//                   }}
+//                   className="ui red button"
+//                 >
+//                   Delete Ticket
+//                 </button>
+
+// <div className="ui raised segment" style={{ width: "900px" }}>
