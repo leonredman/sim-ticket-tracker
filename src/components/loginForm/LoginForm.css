@@ -1,7 +1,7 @@
 .loginContainer {
-  background-color: #f4f4f4;
+  margin-top: 60px;
+  width: 350px;
   padding: 20px;
- 
 }
 .ui.menu {
   border-radius: 0;

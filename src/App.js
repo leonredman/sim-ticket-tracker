@@ -3,11 +3,12 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 //import LoginForm from './components/LoginForm';
 //import DemoLogin from './components/DemoLogin';
 //import SideMenu from "./components/sideMenu/SideMenu";
+//import MainLogin from "./components/mainLogin/MainLogin";
 import Header from "./components/header/Header";
 import AccountRegister from "./pages/accountRegister/AccountRegister";
 import TicketForm from "./pages/ticketForm/TicketForm";
 import Dashboard from "./pages/adminDashboard/Dashboard";
-import MainLogin from "./components/mainLogin/MainLogin";
+import LoginPage from "./pages/loginPage/loginPage";
 import ResetPassword from "./pages/resetPassword/ResetPassword";
 import WorkTicket from "./pages/workTicket/WorkTicket";
 import UpdateForm from "./pages/updateForm/UpdateForm";
@@ -24,7 +25,7 @@ const tracker = () => {
           <Header />
           <Switch>
             <Route path="/" exact>
-              <MainLogin />
+              <LoginPage />
             </Route>
             <Route path="/dashboard">
               <Dashboard />

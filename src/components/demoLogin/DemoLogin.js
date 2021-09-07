@@ -1,24 +1,41 @@
 import React from "react";
 import LogButton from "../logButton/LogButton";
+import { Link } from "react-router-dom";
 
 const DemoLogin = () => {
   return (
-    <div className="demoLogContainer">
-      <div
-        className="DemoLoginContainer"
-        style={{ marginTop: "5px", display: "flex", flexDirection: "column" }}
-      >
-        <h2>Demo Log In</h2>
+    <div
+      className="demoLogContainer"
+      style={{ marginLeft: "290px", marginTop: "40px" }}
+    >
+      <div className="ui grid">
+        <div className="row">
+          <div className="five wide column">
+            <Link to="/Dashboard" className="item">
+              <LogButton text="Site Admin" />
+            </Link>
+          </div>
 
-        <LogButton text="Admins. Login" />
-        <LogButton text="Manager Login" />
-        <LogButton text="Developer Login" />
-        <LogButton text="QA-Agent Login" />
+          <div className="five wide column">
+            <Link to="/Ws1Dashboard" className="item">
+              <LogButton text="Ws Specialist" />
+            </Link>
+          </div>
+        </div>
 
-        <p>
-          All newly registered users are assigned the role of Submitter. You can
-          demo other roles for this application without registering.
-        </p>
+        <div className="row">
+          <div className="five wide column">
+            <Link to="/DevDashboard" className="item">
+              <LogButton text="Developer" />
+            </Link>
+          </div>
+
+          <div className="five wide column">
+            <Link to="/QaDashboard" className="item">
+              <LogButton text="QA Agent" />
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );
