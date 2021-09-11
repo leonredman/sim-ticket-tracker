@@ -1,5 +1,5 @@
 #loginBackgroundImg {
-  background-image: url("/Users/leonredman/projects/ticket-tracker/src/images/freeimg_2.jpg");
+  background-image: url("https://raw.githubusercontent.com/leonredman/sim-ticket-tracker/master/src/images/freeimg_2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
