@@ -5,7 +5,7 @@ import "../../components/mainLogin/MainLoginStyles.css";
 
 const LoginPage = () => {
   return (
-    <div class="ui-container-login" id="loginBackgroundImg">
+    <div className="ui-container-login" id="loginBackgroundImg">
       <div className="ui grid">
         <div className="ui-container-login">
           <div className="row">

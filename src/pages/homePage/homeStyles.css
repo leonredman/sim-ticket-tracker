@@ -1,0 +1,26 @@
+#homeBackgroundImg {
+  background-image: url("/Users/leonredman/projects/ticket-tracker/src/images/freeimg_51.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 70%;
+  /* background-position: center; */
+  margin-top: -20px;
+}
+
+.ui-container-home {
+  height: 80vh;
+  margin-top: 0;
+}
+
+.hero-title {
+  color: white;
+  padding-top: 300px;
+  padding-left: 200px;
+  font-size: 36px;
+}
+
+.hero-text {
+  color: white;
+  padding-left: 200px;
+  font-size: 18px;
+}

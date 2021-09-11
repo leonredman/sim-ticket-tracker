@@ -5,12 +5,11 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div className="ui blue inverted menu">
-      <div className="header item">
-        Simple Issue Manager
-        <br />
-        Tracking System
-      </div>
       <Link to="/" className="item">
+        SIMTraK
+      </Link>
+
+      <Link to="/loginPage" className="item">
         Login
       </Link>
       <Link to="/Dashboard" className="item">

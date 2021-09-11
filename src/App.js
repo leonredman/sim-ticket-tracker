@@ -15,7 +15,7 @@ import UpdateForm from "./pages/updateForm/UpdateForm";
 import DevDashboard from "./pages/DevDashboard/DevDashboard";
 import QaDashboard from "./pages/QaDashboard/QaDashboard";
 import Ws1Dashboard from "./pages/Ws1Dashboard/Ws1Dashboard";
-import homePage from "./pages/homePage/homePage";
+import HomePage from "./pages/homePage/homePage";
 
 const tracker = () => {
   // use switch and create routes to handle url params
@@ -26,7 +26,7 @@ const tracker = () => {
           <Header />
           <Switch>
             <Route path="/" exact>
-              <homePage />
+              <HomePage />
             </Route>
             <Route path="/loginPage" exact>
               <LoginPage />
