@@ -30,7 +30,7 @@ const TicketForm = (props) => {
   const { id } = useParams();
 
   // updated values set to state
-  const [newValues, setNewValues] = useState([]);
+  // const [newValues, setNewValues] = useState([]);
 
   const [newStatus, setNewStatus] = useState("");
   const [newCustomerName, setNewCustomerName] = useState("");

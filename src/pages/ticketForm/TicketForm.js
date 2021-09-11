@@ -16,8 +16,8 @@ const TicketForm = () => {
   const [description, setDescription] = useState("");
   const [priority, setPriority] = useState("");
   const [websiteSpecialist, setWebsiteSpecialist] = useState("");
-  const [developer, setDeveloper] = useState("");
-  const [qaAgent, setQaAgent] = useState("");
+  //const [developer, setDeveloper] = useState("");
+  //const [qaAgent, setQaAgent] = useState("");
 
   //function to POST/SEND data to backend/database executed on button click
   const submitTicket = () => {
