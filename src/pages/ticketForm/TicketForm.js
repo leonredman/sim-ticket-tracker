@@ -16,8 +16,8 @@ const TicketForm = () => {
   const [description, setDescription] = useState("");
   const [priority, setPriority] = useState("");
   const [websiteSpecialist, setWebsiteSpecialist] = useState("");
-  //const [developer, setDeveloper] = useState("");
-  //const [qaAgent, setQaAgent] = useState("");
+  const [developer, setDeveloper] = useState("");
+  const [qaAgent, setQaAgent] = useState("");
 
   //function to POST/SEND data to backend/database executed on button click
   const submitTicket = () => {
@@ -231,6 +231,41 @@ const TicketForm = () => {
                   name="websiteSpecialist"
                   onChange={(e) => {
                     setWebsiteSpecialist(e.target.value);
+                  }}
+                >
+                  <option value="">Select</option>
+                  <option value="Tom Cruize">Tom Cruize</option>
+                  <option value="Brad Pitt">Brad Pitt</option>
+                  <option value="Russel Crow">Russel Crow</option>
+                </select>
+              </div>
+            </div>
+
+            <div className="fields">
+              <div className="six wide field">
+                <label>Developer</label>
+                <select
+                  className="ui dropdown"
+                  name="developer"
+                  onChange={(e) => {
+                    setDeveloper(e.target.value);
+                  }}
+                >
+                  <option value="">Select</option>
+                  <option value="Tom Cruize">Tom Cruize</option>
+                  <option value="Brad Pitt">Brad Pitt</option>
+                  <option value="Russel Crow">Russel Crow</option>
+                </select>
+              </div>
+            </div>
+            <div className="fields">
+              <div className="six wide field">
+                <label>QA Agent</label>
+                <select
+                  className="ui dropdown"
+                  name="qaAgent"
+                  onChange={(e) => {
+                    setQaAgent(e.target.value);
                   }}
                 >
                   <option value="">Select</option>
