@@ -22,7 +22,7 @@ const TicketForm = () => {
   //function to POST/SEND data to backend/database executed on button click
   const submitTicket = () => {
     // Axios.post("http://localhost:3001/ticket/create", {
-    Axios.post("https://sim-ticket-tracker.herokuapp.com/ticket/create", {
+    Axios.post("http://sim-ticket-tracker.herokuapp.com/ticket/create", {
       status: status,
       customerName: customerName,
       customerID: customerID,

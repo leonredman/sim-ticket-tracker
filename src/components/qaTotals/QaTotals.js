@@ -8,7 +8,7 @@ const QaTotals = () => {
   //use Hook to get data and update component
   useEffect(() => {
     // Axios.get("http://localhost:3001/tickets").then((response) => {
-    Axios.get("https://sim-ticket-tracker.herokuapp.com/tickets").then(
+    Axios.get("http://sim-ticket-tracker.herokuapp.com/tickets").then(
       (response) => {
         //console.log(response.data);   // show data object
         setQaTotals(response.data);
