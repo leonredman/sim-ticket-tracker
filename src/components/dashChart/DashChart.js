@@ -10,7 +10,7 @@ const ChartTotals = () => {
 
   useEffect(() => {
     //Axios.get("http://localhost:3001/tickets/chart").then((response) => {
-    Axios.get("http://sim-ticket-tracker.herokuapp.com/tickets/chart").then(
+    Axios.get("https://sim-ticket-tracker.herokuapp.com/tickets/chart").then(
       (response) => {
         //console.log(response.data);   // get request result = response.data as data object
 

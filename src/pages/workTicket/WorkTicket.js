@@ -28,7 +28,7 @@ const WorkTicket = () => {
   //Hook to get data and update component using params
   useEffect(() => {
     //Axios.get(`http://localhost:3001/ticket/${id}`).then((response) => {
-    Axios.get(`http://sim-ticket-tracker.herokuapp.com/ticket/${id}`).then(
+    Axios.get(`https://sim-ticket-tracker.herokuapp.com/ticket/${id}`).then(
       (response) => {
         console.log(response.data); // show data object
         setWorkTicket(response.data);
@@ -39,7 +39,9 @@ const WorkTicket = () => {
   // function delete ticket
   const deleteTicket = (id) => {
     //Axios.delete(`http://localhost:3001/ticket/delete/${id}`);
-    Axios.delete(`http://sim-ticket-tracker.herokuapp.com/ticket/delete/${id}`);
+    Axios.delete(
+      `https://sim-ticket-tracker.herokuapp.com/ticket/delete/${id}`
+    );
   };
 
   return (
