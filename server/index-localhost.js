@@ -7,11 +7,11 @@ const bodyParser = require("body-parser");
 
 // database connection
 const DB = mysql.createConnection({
-  host: "us-cdbr-east-04.cleardb.com",
-  user: "b805d46a7e4652",
-  password: "7ea149ed",
-  database: "heroku_fe5fe7e65bd0e78",
-  port: "3306",
+  host: "localhost",
+  user: "root",
+  password: "root",
+  database: "SIMtickets",
+  port: "8889",
 });
 
 app.use(cors());
@@ -154,7 +154,5 @@ app.post("/ticket/create", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(
-    `Example app listening at https://sim-ticket-tracker.herokuapp.com:${port}`
-  );
+  console.log(`Example app listening at http://localhost:${port}`);
 });

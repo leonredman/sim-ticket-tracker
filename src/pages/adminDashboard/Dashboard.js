@@ -30,10 +30,13 @@ const Dashboard = () => {
 
   //use Hook to get data and set response date to tickets in state and update component on load
   useEffect(() => {
-    Axios.get("http://localhost:3001/tickets").then((response) => {
-      //console.log(response.data);   // show data object
-      setTickets(response.data);
-    });
+    // Axios.get("http://localhost:3001/tickets").then((response) => {
+    Axios.get("https://sim-ticket-tracker.herokuapp.com/tickets").then(
+      (response) => {
+        //console.log(response.data);   // show data object
+        setTickets(response.data);
+      }
+    );
   }, []);
 
   return (

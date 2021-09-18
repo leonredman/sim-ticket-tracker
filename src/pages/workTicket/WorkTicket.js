@@ -27,15 +27,21 @@ const WorkTicket = () => {
 
   //Hook to get data and update component using params
   useEffect(() => {
-    Axios.get(`http://localhost:3001/ticket/${id}`).then((response) => {
-      console.log(response.data); // show data object
-      setWorkTicket(response.data);
-    });
+    //Axios.get(`http://localhost:3001/ticket/${id}`).then((response) => {
+    Axios.get(`https://sim-ticket-tracker.herokuapp.com/ticket/${id}`).then(
+      (response) => {
+        console.log(response.data); // show data object
+        setWorkTicket(response.data);
+      }
+    );
   });
 
   // function delete ticket
   const deleteTicket = (id) => {
-    Axios.delete(`http://localhost:3001/ticket/delete/${id}`);
+    //Axios.delete(`http://localhost:3001/ticket/delete/${id}`);
+    Axios.delete(
+      `https://sim-ticket-tracker.herokuapp.com/ticket/delete/${id}`
+    );
   };
 
   return (

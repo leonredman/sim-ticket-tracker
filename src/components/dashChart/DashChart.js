@@ -9,24 +9,27 @@ const ChartTotals = () => {
   // Hook to get data and update component
 
   useEffect(() => {
-    Axios.get("http://localhost:3001/tickets/chart").then((response) => {
-      //console.log(response.data);   // get request result = response.data as data object
+    //Axios.get("http://localhost:3001/tickets/chart").then((response) => {
+    Axios.get("https://sim-ticket-tracker.herokuapp.com/tickets/chart").then(
+      (response) => {
+        //console.log(response.data);   // get request result = response.data as data object
 
-      // setChartTotals response  with function that loops through all the elements in an array
-      // to convert it to a single value. An array of values in this case. Notice how the first
-      // param is a function and the second is an array. The empty array is the initial value.
-      // Take each element in the array and call Object.values on it to get it's values and
-      // combine those with the values in the array.
+        // setChartTotals response  with function that loops through all the elements in an array
+        // to convert it to a single value. An array of values in this case. Notice how the first
+        // param is a function and the second is an array. The empty array is the initial value.
+        // Take each element in the array and call Object.values on it to get it's values and
+        // combine those with the values in the array.
 
-      setChartTotals(
-        response.data.reduce(
-          (acc, value) => [...acc, ...Object.values(value)],
-          []
-        )
-      );
+        setChartTotals(
+          response.data.reduce(
+            (acc, value) => [...acc, ...Object.values(value)],
+            []
+          )
+        );
 
-      //console.log(chartTotals);
-    });
+        //console.log(chartTotals);
+      }
+    );
   }, []);
 
   // add chartjs component data inside the scope
