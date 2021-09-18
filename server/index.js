@@ -11,7 +11,6 @@ const DB = mysql.createConnection({
   user: "b805d46a7e4652",
   password: "7ea149ed",
   database: "heroku_fe5fe7e65bd0e78",
-  port: "3306",
 });
 
 app.use(cors());
