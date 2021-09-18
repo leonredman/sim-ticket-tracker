@@ -8,9 +8,9 @@ const bodyParser = require("body-parser");
 // database connection
 const DB = mysql.createConnection({
   host: "us-cdbr-east-04.cleardb.com",
-  user: "b805d46a7e4652",
-  password: "7ea149ed",
-  database: "heroku_fe5fe7e65bd0e78",
+  user: "b74a4aeb614a56",
+  password: "25cf9bb0",
+  database: "heroku_0f6ff7095705b7d",
 });
 
 app.use(cors());
@@ -152,9 +152,9 @@ app.post("/ticket/create", (req, res) => {
   );
 });
 
-// app.listen(port, () => {
-app.listen(process.env.port || port, () => {
+app.listen(port, () => {
+  //app.listen(process.env.port || port, () => {
   console.log(
-    `Example app listening at http://sim-ticket-tracker.herokuapp.com:${port}`
+    `Example app listening at https://simtrak-database.herokuapp.com/:${port}`
   );
 });
