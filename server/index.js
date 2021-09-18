@@ -152,7 +152,8 @@ app.post("/ticket/create", (req, res) => {
   );
 });
 
-app.listen(port, () => {
+// app.listen(port, () => {
+app.listen(process.env.port || port, () => {
   console.log(
     `Example app listening at https://sim-ticket-tracker.herokuapp.com:${port}`
   );
