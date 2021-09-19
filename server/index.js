@@ -95,10 +95,11 @@ app.delete("/ticket/delete/:id", (req, res) => {
 //-------------  ROUTE 'GET REQUEST' FOR  CHART DATA
 app.get("/tickets/chart", (req, res) => {
   const sqlSelect = `SELECT
-  (SELECT COUNT(*) FROM SIMtickets.ticket_info WHERE status = 'Ready') AS new_tickets,
-  (SELECT COUNT(*) FROM SIMtickets.ticket_info WHERE status = 'Build In Progress')AS in_progress,
-  (SELECT COUNT(*) FROM SIMtickets.ticket_info WHERE status = 'QA In Progress')AS in_QA,
-  (SELECT COUNT(*) FROM SIMtickets.ticket_info WHERE status = 'Resolved')AS completed;`;
+  
+  (SELECT COUNT(*) FROM heroku_0f6ff7095705b7d.ticket_info WHERE status = 'Ready') AS new_tickets,
+  (SELECT COUNT(*) FROM heroku_0f6ff7095705b7d.ticket_info WHERE status = 'Build In Progress')AS in_progress,
+  (SELECT COUNT(*) FROM heroku_0f6ff7095705b7d.ticket_info WHERE status = 'QA In Progress')AS in_QA,
+  (SELECT COUNT(*) FROM heroku_0f6ff7095705b7d.ticket_info WHERE status = 'Resolved')AS completed;`;
   //const sqlSelect = "SELECT * FROM ticket_info WHERE status = Ready";
   DB.query(sqlSelect, (err, result) => {
     //console.log(result);
