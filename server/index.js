@@ -11,6 +11,7 @@ const DB = mysql.createConnection({
   user: "b74a4aeb614a56",
   password: "25cf9bb0",
   database: "heroku_0f6ff7095705b7d",
+  port: 3306,
 });
 
 app.use(cors());
@@ -152,8 +153,8 @@ app.post("/ticket/create", (req, res) => {
   );
 });
 
-app.listen(port, () => {
-  //app.listen(process.env.port || port, () => {
+//app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log(
     `Example app listening at https://simtrak-database.herokuapp.com/:${port}`
   );

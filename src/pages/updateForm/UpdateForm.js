@@ -52,7 +52,7 @@ const TicketForm = (props) => {
   useEffect(() => {
     if (match.id !== "new") {
       //Axios.get(`http://localhost:3001/ticket/${id}`).then((response) => {
-      Axios.get(`https://sim-ticket-tracker.herokuapp.com/ticket/${id}`).then(
+      Axios.get(`https://simtrak-database.herokuapp.com/ticket/${id}`).then(
         (response) => {
           console.log(response.data);
           setValues(response.data);
@@ -65,7 +65,7 @@ const TicketForm = (props) => {
   // Axios.put("/ticket/update/:id", values).then(() => {  // clean up to use values variable
   const updateTicket = (id) => {
     // Axios.put(`http://localhost:3001/ticket/update/${id}`, {
-    Axios.put(`https://sim-ticket-tracker.herokuapp.com/ticket/update/${id}`, {
+    Axios.put(`https://simtrak-database.herokuapp.com/ticket/update/${id}`, {
       status: newStatus,
       customerName: newCustomerName,
       customerId: newCustomerID,
