@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useRouteMatch, useParams } from "react-router-dom";
 import Axios from "axios";
 
-//import TextField from "../ui/text-field";
+import TextField from "../../ui/text-field";
 
 // set the state for the form
 const TicketForm = (props) => {
@@ -29,25 +29,6 @@ const TicketForm = (props) => {
 
   const { id } = useParams();
 
-  // updated values set to state
-  // const [newValues, setNewValues] = useState([]);
-
-  const [newStatus, setNewStatus] = useState("");
-  const [newCustomerName, setNewCustomerName] = useState("");
-  const [newCustomerID, setNewCustomerID] = useState("");
-  const [newEmail, setNewEmail] = useState("");
-  const [newPhoneNumber, setNewPhoneNumber] = useState("");
-  const [newDomain, setNewDomain] = useState("");
-  const [newPlanType, setNewPlanType] = useState("");
-  const [newCreated, setNewCreated] = useState("");
-  const [newDueDate, setNewDueDate] = useState("");
-  const [newCategory, setNewCategory] = useState("");
-  const [newDescription, setNewDescription] = useState("");
-  const [newPriority, setNewPriority] = useState("");
-  const [newWebsiteSpecialist, setNewWebsiteSpecialist] = useState("");
-  const [newDeveloper, setNewDeveloper] = useState("");
-  const [newQaAgent, setNewQaAgent] = useState("");
-
   // Get ticket using params id
   useEffect(() => {
     if (match.id !== "new") {
@@ -66,21 +47,7 @@ const TicketForm = (props) => {
   const updateTicket = (id) => {
     // Axios.put(`http://localhost:3001/ticket/update/${id}`, {
     Axios.put(`https://simtrak-database.herokuapp.com/ticket/update/${id}`, {
-      status: newStatus,
-      customerName: newCustomerName,
-      customerId: newCustomerID,
-      email: newEmail,
-      phoneNumber: newPhoneNumber,
-      domain: newDomain,
-      planType: newPlanType,
-      created: newCreated,
-      dueDate: newDueDate,
-      category: newCategory,
-      description: newDescription,
-      priority: newPriority,
-      websiteSpecialist: newWebsiteSpecialist,
-      developer: newDeveloper,
-      qaAgent: newQaAgent,
+      setValues,
     }).then(() => {
       alert("successful insert");
       //clean up - remove alert, page to redirect to dashboard - use router and push to dashboard
@@ -103,179 +70,205 @@ const TicketForm = (props) => {
           <div className="ui form">
             <div className="fields">
               <div className="six wide field">
-                <label>Customer Name</label>
-                <input
-                  type="text"
-                  name="customerName"
-                  defaultValue={values.customerName}
-                  onChange={(e) => {
-                    setNewCustomerName(e.target.value);
-                  }}
+                <TextField
+                  label="Customer Name"
+                  value={values.customerName}
+                  onChange={(customerName) =>
+                    setValues((prev) => ({
+                      ...prev,
+                      customerName,
+                    }))
+                  }
                 />
               </div>
 
               <div className="six wide field">
-                <label>Customer ID Number</label>
-                <input
-                  type="text"
-                  defaultValue={values.customerID}
-                  onChange={(e) => {
-                    setNewCustomerID(e.target.value);
-                  }}
+                <TextField
+                  label="Customer ID"
+                  value={values.customerID}
+                  onChange={(customerID) =>
+                    setValues((prev) => ({
+                      ...prev,
+                      customerID,
+                    }))
+                  }
                 />
               </div>
 
               <div className="six wide field">
-                <label>Status</label>
-                <input
-                  type="text"
-                  defaultValue={values.status}
-                  onChange={(e) => {
-                    setNewStatus(e.target.value);
-                  }}
-                />
-              </div>
-            </div>
-
-            <div className="fields">
-              <div className="six wide field">
-                <label>Email</label>
-                <input
-                  type="text"
-                  name="email"
-                  defaultValue={values.email}
-                  onChange={(e) => {
-                    setNewEmail(e.target.value);
-                  }}
-                />
-              </div>
-
-              <div className="six wide field">
-                <label>Phone Number</label>
-                <input
-                  type="text"
-                  defaultValue={values.phoneNumber}
-                  onChange={(e) => {
-                    setNewPhoneNumber(e.target.value);
-                  }}
-                />
-              </div>
-
-              <div className="six wide field">
-                <label>Domain</label>
-                <input
-                  type="text"
-                  defaultValue={values.domain}
-                  onChange={(e) => {
-                    setNewDomain(e.target.value);
-                  }}
+                <TextField
+                  label="Status"
+                  value={values.status}
+                  onChange={(status) =>
+                    setValues((prev) => ({
+                      ...prev,
+                      status,
+                    }))
+                  }
                 />
               </div>
             </div>
 
             <div className="fields">
               <div className="six wide field">
-                <label>Plan Type</label>
-                <input
-                  type="text"
-                  name="planType"
-                  defaultValue={values.planType}
-                  onChange={(e) => {
-                    setNewPlanType(e.target.value);
-                  }}
+                <TextField
+                  label="Email"
+                  value={values.email}
+                  onChange={(email) =>
+                    setValues((prev) => ({
+                      ...prev,
+                      email,
+                    }))
+                  }
                 />
               </div>
 
               <div className="six wide field">
-                <label>Created</label>
-                <input
-                  type="text"
-                  defaultValue={values.created}
-                  onChange={(e) => {
-                    setNewCreated(e.target.value);
-                  }}
+                <TextField
+                  label="Phone Number"
+                  value={values.phoneNumber}
+                  onChange={(phoneNumber) =>
+                    setValues((prev) => ({
+                      ...prev,
+                      phoneNumber,
+                    }))
+                  }
                 />
               </div>
 
               <div className="six wide field">
-                <label>Due Date</label>
-                <input
-                  type="text"
-                  defaultValue={values.dueDate}
-                  onChange={(e) => {
-                    setNewDueDate(e.target.value);
-                  }}
-                />
-              </div>
-            </div>
-
-            <div className="fields">
-              <div className="six wide field">
-                <label>Category</label>
-                <input
-                  type="text"
-                  name="category"
-                  defaultValue={values.category}
-                  onChange={(e) => {
-                    setNewCategory(e.target.value);
-                  }}
-                />
-              </div>
-
-              <div className="six wide field">
-                <label>Description</label>
-                <input
-                  type="text"
-                  defaultValue={values.description}
-                  onChange={(e) => {
-                    setNewDescription(e.target.value);
-                  }}
-                />
-              </div>
-
-              <div className="six wide field">
-                <label>Priority</label>
-                <input
-                  type="text"
-                  defaultValue={values.priority}
-                  onChange={(e) => {
-                    setNewPriority(e.target.value);
-                  }}
+                <TextField
+                  label="Domain"
+                  value={values.domain}
+                  onChange={(domain) =>
+                    setValues((prev) => ({
+                      ...prev,
+                      domain,
+                    }))
+                  }
                 />
               </div>
             </div>
 
             <div className="fields">
               <div className="six wide field">
-                <label>Website Specialist</label>
-                <input
-                  type="text"
-                  defaultValue={values.websiteSpecialist}
-                  onChange={(e) => {
-                    setNewWebsiteSpecialist(e.target.value);
-                  }}
+                <TextField
+                  label="Plan Type"
+                  value={values.planType}
+                  onChange={(planType) =>
+                    setValues((prev) => ({
+                      ...prev,
+                      planType,
+                    }))
+                  }
                 />
               </div>
 
               <div className="six wide field">
-                <label>Developer</label>
-                <input
-                  type="text"
-                  defaultValue={values.developer}
-                  onChange={(e) => {
-                    setNewDeveloper(e.target.value);
-                  }}
+                <TextField
+                  label="Created"
+                  value={values.created}
+                  onChange={(created) =>
+                    setValues((prev) => ({
+                      ...prev,
+                      created,
+                    }))
+                  }
                 />
               </div>
 
               <div className="six wide field">
-                <label>QA Agent</label>
-                <input
-                  type="text"
-                  defaultValue={values.qaAgent}
-                  onChange={(e) => {
-                    setNewQaAgent(e.target.value);
-                  }}
+                <TextField
+                  label="Due Date"
+                  value={values.dueDate}
+                  onChange={(dueDate) =>
+                    setValues((prev) => ({
+                      ...prev,
+                      dueDate,
+                    }))
+                  }
+                />
+              </div>
+            </div>
+
+            <div className="fields">
+              <div className="six wide field">
+                <TextField
+                  label="Category"
+                  value={values.category}
+                  onChange={(category) =>
+                    setValues((prev) => ({
+                      ...prev,
+                      category,
+                    }))
+                  }
+                />
+              </div>
+
+              <div className="six wide field">
+                <TextField
+                  label="Description"
+                  value={values.description}
+                  onChange={(description) =>
+                    setValues((prev) => ({
+                      ...prev,
+                      description,
+                    }))
+                  }
+                />
+              </div>
+
+              <div className="six wide field">
+                <TextField
+                  label="Priority"
+                  value={values.priority}
+                  onChange={(priority) =>
+                    setValues((prev) => ({
+                      ...prev,
+                      priority,
+                    }))
+                  }
+                />
+              </div>
+            </div>
+
+            <div className="fields">
+              <div className="six wide field">
+                <TextField
+                  label="Website Specialist"
+                  value={values.websiteSpecialist}
+                  onChange={(websiteSpecialist) =>
+                    setValues((prev) => ({
+                      ...prev,
+                      websiteSpecialist,
+                    }))
+                  }
+                />
+              </div>
+
+              <div className="six wide field">
+                <TextField
+                  label="Developer"
+                  value={values.developer}
+                  onChange={(developer) =>
+                    setValues((prev) => ({
+                      ...prev,
+                      developer,
+                    }))
+                  }
+                />
+              </div>
+
+              <div className="six wide field">
+                <TextField
+                  label="QA Agent"
+                  value={values.qaAgent}
+                  onChange={(qaAgent) =>
+                    setValues((prev) => ({
+                      ...prev,
+                      qaAgent,
+                    }))
+                  }
                 />
               </div>
             </div>
