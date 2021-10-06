@@ -47,7 +47,21 @@ const TicketForm = (props) => {
   const updateTicket = (id) => {
     // Axios.put(`http://localhost:3001/ticket/update/${id}`, {
     Axios.put(`https://simtrak-database.herokuapp.com/ticket/update/${id}`, {
-      setValues,
+      status: values.status,
+      customerName: values.customerName,
+      customerID: values.customerID,
+      email: values.email,
+      phoneNumber: values.phoneNumber,
+      domain: values.domain,
+      planType: values.planType,
+      created: values.created,
+      dueDate: values.dueDate,
+      category: values.category,
+      description: values.description,
+      priority: values.priority,
+      websiteSpecialist: values.websiteSpecialist,
+      developer: values.developer,
+      agent: values.agent,
     }).then(() => {
       alert("successful insert");
       //clean up - remove alert, page to redirect to dashboard - use router and push to dashboard
@@ -55,7 +69,7 @@ const TicketForm = (props) => {
     });
   };
 
-  console.log(values);
+  //console.log(values);
 
   return (
     <div className="newTicketContainer">
