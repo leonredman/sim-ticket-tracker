@@ -34,7 +34,7 @@ const WorkTicket = () => {
         setWorkTicket(response.data);
       }
     );
-  });
+  }, [id]);
 
   // function delete ticket
   const deleteTicket = (id) => {
