@@ -39,9 +39,9 @@ const TicketForm = () => {
       developer: developer,
       qaAgent: qaAgent,
     }).then(() => {
-      // alert("successful insert");
+      alert("successful insert");
       // try to redirect
-      window.location.href = "/Dashboard";
+      // window.location.href = "/Dashboard";
     });
   };
 
