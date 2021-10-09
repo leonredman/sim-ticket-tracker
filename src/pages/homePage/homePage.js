@@ -17,11 +17,17 @@ const HomePage = () => {
                 attachments, and more – letting individual members focus on what
                 matters.
               </p>
+              <button className="ui button" id="hero-button">
+                Demo
+              </button>
             </div>
           </div>
         </div>
       </div>
-      <div className="ui vertical stripe segment">
+      <div
+        style={{ paddingTop: "80px", paddingBottom: "80px" }}
+        className="ui vertical stripe segment"
+      >
         <div className="ui middle aligned stackable grid container">
           <div className="centered row">
             <div className="six wide centered column">
@@ -56,7 +62,10 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="ui inverted vertical stripe segment">
+      <div
+        style={{ paddingTop: "80px", paddingBottom: "80px" }}
+        className="ui inverted vertical stripe segment"
+      >
         <div className="ui middle aligned stackable grid container">
           <div className="row">
             <div className="eight wide column">
@@ -82,7 +91,10 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      <div className="ui vertical stripe segment">
+      <div
+        style={{ paddingTop: "80px", paddingBottom: "80px" }}
+        className="ui vertical stripe segment"
+      >
         <div className="ui middle aligned stackable grid container">
           <div className="row">
             <div className="eight wide column">
