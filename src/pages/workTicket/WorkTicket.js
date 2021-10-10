@@ -39,7 +39,11 @@ const WorkTicket = () => {
   // function delete ticket
   const deleteTicket = (id) => {
     //Axios.delete(`http://localhost:3001/ticket/delete/${id}`);
-    Axios.delete(`https://simtrak-database.herokuapp.com/ticket/delete/${id}`);
+    Axios.delete(
+      `https://simtrak-database.herokuapp.com/ticket/delete/${id}`
+    ).then((response) => {
+      alert("successful Delete");
+    });
   };
 
   return (
@@ -49,26 +53,33 @@ const WorkTicket = () => {
       <div className="WorkTicketContainer">
         <div className="ui grid">
           <div className="row">
-            <div className="nine wide column">
+            <div className="seven wide column">
               Web Design Services
               <h3>Issue Ticket # SIM 9170{workTicket.id} </h3>
             </div>
 
-            <div className="two wide column">
+            <div className="three wide column">
               <Link to={`/UpdateForm/${id}`}>
-                <i className="edit outline icon"></i>
-                Edit Ticket
+                <button class="ui basic button">
+                  <i
+                    className="edit outline icon"
+                    style={{ color: "#4183c4" }}
+                  ></i>
+                  Edit Ticket
+                </button>
               </Link>
             </div>
 
-            <div className="two wide column" style={{ color: "#4183c4" }}>
-              <i
-                className="blue trash alternate outline icon"
+            <div className="three wide column" style={{ color: "#4183c4" }}>
+              <button
+                class="ui basic button"
                 onClick={() => {
                   deleteTicket(workTicket.id);
                 }}
-              ></i>
-              Delete Ticket
+              >
+                <i className="blue trash alternate outline icon"></i>
+                Delete Ticket
+              </button>
             </div>
             <div className="three wide column">
               <div
