@@ -4,7 +4,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 //import DemoLogin from './components/DemoLogin';
 //import SideMenu from "./components/sideMenu/SideMenu";
 //import MainLogin from "./components/mainLogin/MainLogin";
-import Header from "./components/header/Header";
+//import Header from "./components/header/Header";
 import AccountRegister from "./pages/accountRegister/AccountRegister";
 import TicketForm from "./pages/ticketForm/TicketForm";
 import Dashboard from "./pages/adminDashboard/Dashboard";
