@@ -23,7 +23,6 @@ const tracker = () => {
     <div>
       <div>
         <BrowserRouter>
-          <Header />
           <Switch>
             <Route path="/" exact>
               <HomePage />
