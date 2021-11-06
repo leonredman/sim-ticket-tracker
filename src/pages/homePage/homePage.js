@@ -1,10 +1,12 @@
 import React from "react";
 import "../../pages/homePage/homeStyles.css";
+import ProductHeader from "../../components/product-header/product-header";
 import { Link } from "react-router-dom";
 
 const HomePage = () => {
   return (
     <div>
+      <ProductHeader />
       <div className="ui-container-home" id="homeBackgroundImg">
         <div>
           <div className="ui grid">
@@ -18,11 +20,11 @@ const HomePage = () => {
                 attachments, and more – letting individual members focus on what
                 matters.
               </p>
-              <Link to="/Dashboard" className="item">
+              <a className="item" href="#demo-logins">
                 <button className="ui button" id="hero-button">
-                  Demo
+                  Demo Logins
                 </button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -130,6 +132,110 @@ const HomePage = () => {
                 submitting tickets. This role is great for any customer-facing
                 team member who is not involved in any code.
               </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        style={{ paddingTop: "80px", paddingBottom: "80px" }}
+        className="ui inverted vertical stripe segment"
+      >
+        <div className="ui middle aligned stackable grid container">
+          <div className="row">
+            <h1 id="demo-logins">Demo Logins</h1>
+            <div className="ui link four cards">
+              <div className="card">
+                <Link to="/Dashboard" className="image">
+                  <img src="https://semantic-ui.com/images/avatar2/large/matthew.png" />
+                </Link>
+
+                <div className="content">
+                  <Link to="/Dashboard" className="item">
+                    <h1 className="header">Site Admin</h1>
+                  </Link>
+                  <div className="meta">
+                    <p>Unlimited Access</p>
+                  </div>
+                  <div className="description">
+                    Focused on the big picture with unlimited access to
+                    projects, tickets, & users.
+                  </div>
+                </div>
+              </div>
+
+              <div className="card">
+                <div className="image">
+                  <img src="https://semantic-ui.com/images/avatar2/large/molly.png" />
+                </div>
+                <div className="content">
+                  <Link to="/Dashboard" className="item">
+                    <h1 className="header">Team Manager</h1>
+                  </Link>
+                  <div className="meta">
+                    <span className="date">Manager Access</span>
+                  </div>
+                  <div className="description">
+                    A focus on their own team with edit access to anything at
+                    the management level.
+                  </div>
+                </div>
+                <div className="extra content">
+                  <span className="right floated">Joined in 2011</span>
+                  <span>
+                    <i className="user icon"></i>
+                    35 Friends
+                  </span>
+                </div>
+              </div>
+              <div className="card">
+                <div className="image">
+                  <img src="https://semantic-ui.com/images/avatar2/large/elyse.png" />
+                </div>
+                <div className="content">
+                  <Link to="/Ws1Dashboard" className="item">
+                    <h1 className="header">Website Specialist</h1>
+                  </Link>
+                  <div className="meta">
+                    <p>Submitter</p>
+                  </div>
+                  <div className="description">
+                    The strictest of access levels. Can view most things but can
+                    only interact with their own tickets.
+                  </div>
+                </div>
+                <div className="extra content">
+                  <span className="right floated">Joined in 2014</span>
+                  <span>
+                    <i className="user icon"></i>
+                    151 Friends
+                  </span>
+                </div>
+              </div>
+              <div className="card">
+                <div className="image">
+                  <img src="https://semantic-ui.com/images/avatar/large/elliot.jpg" />
+                </div>
+                <div className="content">
+                  <Link to="/devDashboard" className="item">
+                    <h1 className="header">Developers </h1>
+                  </Link>
+                  <div className="meta">
+                    <p>Ticket Access</p>
+                  </div>
+                  <div className="description">
+                    A heavy focus on their own assigned tickets. Edit access
+                    restricted to their own tickets in their projects.
+                  </div>
+                </div>
+                <div className="extra content">
+                  <span className="right floated">Joined in 2014</span>
+                  <span>
+                    <i className="user icon"></i>
+                    151 Friends
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
