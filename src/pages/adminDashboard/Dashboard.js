@@ -8,6 +8,7 @@ import InQaList from "../../components/inQaList/InQaList";
 import DashChart from "../../components/dashChart/DashChart";
 import Totals from "../../components/totals/Totals";
 import SideMenu from "../../components/sideMenu/SideMenu";
+import Header from "../../components/header/Header";
 
 const ticketStatuses = [
   { status: "Ready", className: "ui red segment" },
@@ -41,6 +42,7 @@ const Dashboard = () => {
 
   return (
     <fragement>
+      <Header />
       <SideMenu />
       <div className="ui-container-dash">
         <div className="ui grid">
