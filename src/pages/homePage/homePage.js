@@ -147,7 +147,10 @@ const HomePage = () => {
             <div className="ui link four cards">
               <div className="card">
                 <Link to="/Dashboard" className="image">
-                  <img src="https://semantic-ui.com/images/avatar2/large/matthew.png" />
+                  <img
+                    src="https://semantic-ui.com/images/avatar2/large/matthew.png"
+                    alt="placeholder"
+                  />
                 </Link>
 
                 <div className="content">
@@ -166,7 +169,10 @@ const HomePage = () => {
 
               <div className="card">
                 <div className="image">
-                  <img src="https://semantic-ui.com/images/avatar2/large/molly.png" />
+                  <img
+                    src="https://semantic-ui.com/images/avatar2/large/molly.png"
+                    alt="placeholder"
+                  />
                 </div>
                 <div className="content">
                   <Link to="/Dashboard" className="item">
@@ -190,7 +196,10 @@ const HomePage = () => {
               </div>
               <div className="card">
                 <div className="image">
-                  <img src="https://semantic-ui.com/images/avatar2/large/elyse.png" />
+                  <img
+                    src="https://semantic-ui.com/images/avatar2/large/elyse.png"
+                    alt="placeholder"
+                  />
                 </div>
                 <div className="content">
                   <Link to="/Ws1Dashboard" className="item">
@@ -214,7 +223,10 @@ const HomePage = () => {
               </div>
               <div className="card">
                 <div className="image">
-                  <img src="https://semantic-ui.com/images/avatar/large/elliot.jpg" />
+                  <img
+                    src="https://semantic-ui.com/images/avatar/large/elliot.jpg"
+                    alt="placeholder"
+                  />
                 </div>
                 <div className="content">
                   <Link to="/devDashboard" className="item">
