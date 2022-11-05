@@ -46,7 +46,7 @@ const HomePage = () => {
             <div className="eight wide column">
               <img
                 className="ui large image"
-                src="https://brainhub.eu/library/gfx/best-issue-tracking-systems-jira-2048x1180.png"
+                src="https://hrfilecenter.com/images/Banner2.jpg"
                 alt="placeholder"
               />
             </div>
