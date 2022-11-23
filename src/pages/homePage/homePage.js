@@ -155,7 +155,7 @@ const HomePage = () => {
 
                 <div className="content">
                   <Link to="/Dashboard" className="item">
-                    <h1 className="header">Site Admin</h1>
+                    <h1 className="header">Site Admin.</h1>
                   </Link>
                   <div className="meta">
                     <p>Unlimited Access</p>
@@ -186,13 +186,6 @@ const HomePage = () => {
                     the management level.
                   </div>
                 </div>
-                <div className="extra content">
-                  <span className="right floated">Joined in 2011</span>
-                  <span>
-                    <i className="user icon"></i>
-                    35 Friends
-                  </span>
-                </div>
               </div>
               <div className="card">
                 <div className="image">
@@ -213,13 +206,6 @@ const HomePage = () => {
                     only interact with their own tickets.
                   </div>
                 </div>
-                <div className="extra content">
-                  <span className="right floated">Joined in 2014</span>
-                  <span>
-                    <i className="user icon"></i>
-                    151 Friends
-                  </span>
-                </div>
               </div>
               <div className="card">
                 <div className="image">
@@ -239,13 +225,6 @@ const HomePage = () => {
                     A heavy focus on their own assigned tickets. Edit access
                     restricted to their own tickets in their projects.
                   </div>
-                </div>
-                <div className="extra content">
-                  <span className="right floated">Joined in 2014</span>
-                  <span>
-                    <i className="user icon"></i>
-                    151 Friends
-                  </span>
                 </div>
               </div>
             </div>
