@@ -21,6 +21,24 @@ const Header = () => {
       <Link to="/WorkTicket" className="item">
         Work Ticket
       </Link>
+
+      <div className="right menu">
+        <h4
+          className="ui header"
+          style={{ color: "white", paddingTop: "10px", paddingRight: "20px" }}
+        >
+          <img
+            src="https://semantic-ui.com/images/avatar2/small/matthew.png"
+            alt="placeholder"
+            className="ui tiny circular image"
+          />
+          Patrick Admin
+        </h4>
+        <i
+          className="bell outline icon"
+          style={{ color: "white", paddingTop: "10px", paddingRight: "30px" }}
+        ></i>
+      </div>
     </div>
   );
 };
