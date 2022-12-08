@@ -1,11 +1,15 @@
 import "../adminDashboard/Dashboard.css";
 import React from "react";
+import Header from "../../components/headerDev/Header";
+import SideMenu from "../../components/sideMenuDev/SideMenu";
 // data to be passed as props
 //import data from "../../mockData/data.json";
 
 function DevDashboard() {
   return (
-    <div>
+    <fragment>
+      <Header />
+      <SideMenu />
       <div className="ui-container-dash">
         <div className="ui grid">
           <div className="ui row">
@@ -374,7 +378,7 @@ function DevDashboard() {
           </div>
         </div>
       </div>
-    </div>
+    </fragment>
   );
 }
 
