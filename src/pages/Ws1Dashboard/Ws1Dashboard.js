@@ -1,12 +1,16 @@
-import "../adminDashboard/Dashboard.css";
 import React from "react";
+import Header from "../../components/headerWS1/Header";
+import SideMenu from "../../components/sideMenuWS1/SideMenu";
+import "../adminDashboard/Dashboard.css";
 
 // data to be passed as props
 //import data from "../../mockData/data.json";
 
 function Ws1Dashboard() {
   return (
-    <div>
+    <fragment>
+      <Header />
+      <SideMenu />
       <div className="ui-container-dash">
         <div className="ui grid">
           <div className="ui row">
@@ -203,7 +207,7 @@ function Ws1Dashboard() {
           </div>
         </div>
       </div>
-    </div>
+    </fragment>
   );
 }
 
