@@ -1,5 +1,6 @@
 .ui-container-dash {
-  margin-left: 40px;
+  /* margin-left: 40px; */
+  margin-left: 140px;
   margin-right: 40px;
 }
 
@@ -10,4 +11,8 @@
 
 th {
   font-weight: bold;
+}
+
+.ui.vertical.sidebar {
+  width: 90px;
 }
