@@ -62,8 +62,21 @@ const Dashboard = () => {
             <div className="ui two column centered row">
               <div className="column">
                 <div className="ui red segment">
-                  <h4>New Tickets</h4>
-                  <NewTicketsList />
+                  <h4>Action Center</h4>
+                  <div className="ui message">
+                    <div className="header">Ticket Assignment</div>
+                    <p>
+                      You have 1 unassigned ticket for the Development Team. We
+                      recommend approving this item.
+                    </p>
+                  </div>
+                  <div className="ui message">
+                    <div className="header">User Role Assignment</div>
+                    <p>
+                      You have 1 new user who needs to be approved for role and
+                      permissions. We recommend reviewing the changes.
+                    </p>
+                  </div>
                 </div>
               </div>
 
@@ -91,6 +104,11 @@ const Dashboard = () => {
                 <div className="ui green segment">
                   <h4>Tickets In QA</h4>
                   <InQaList />
+                </div>
+
+                <div className="ui red segment">
+                  <h4>New Tickets</h4>
+                  <NewTicketsList />
                 </div>
               </div>
             </div>
