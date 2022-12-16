@@ -1,11 +1,13 @@
 import "../adminDashboard/Dashboard.css";
 import React from "react";
+import Header from "../../components/headerQA/Header";
 // data to be passed as props
 // import data from "../../mockData/data.json";
 
 function QaDashboard() {
   return (
     <div>
+      <Header />
       <div className="ui-container-dash">
         <div className="ui grid">
           <div className="ui row">
