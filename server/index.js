@@ -7,11 +7,11 @@ const bodyParser = require("body-parser");
 
 // database connection
 const DB = mysql.createConnection({
-  host: "containers-us-west-173.railway.app",
-  user: "root",
-  password: "QYi8CFLD5agjTikxNqSo",
-  database: "railway",
-  port: 8014,
+  host: "us-cdbr-east-04.cleardb.com",
+  user: "b74a4aeb614a56",
+  password: "25cf9bb0",
+  database: "heroku_0f6ff7095705b7d",
+  port: 3306,
 });
 
 app.use(cors());
