@@ -1,0 +1,72 @@
+/*DROP DATABASE IF EXISTS `sim_tickets_database`;*/
+CREATE DATABASE IF NOT EXISTS 'sim_tickets_database' ;
+USE 'sim_tickets_database';
+
+DROP TABLE IF EXISTS 'customers';
+CREATE TABLE 'customers' (
+'customer_id' BIGINT(255) NOT NULL AUTO_INCREMENT,
+'first_name' VARCHAR(255) DEFAULT NULL,
+'last_name' VARCHAR(255) DEFAULT NULL,
+'street_address' VARCHAR(255) DEFAULT NULL,
+'city' VARCHAR(255) DEFAULT NULL,
+'state' VARCHAR(255) DEFAULT NULL,
+'country' VARCHAR(255) DEFAULT NULL,
+'zip_code' VARCHAR(255) DEFAULT NULL,
+'email' VARCHAR(255) DEFAULT NULL,
+'phone_number' VARCHAR(255) DEFAULT NULL,
+'register_date' datetime(6) DEFAULT NULL,
+'product_id' BIGINT(255) DEFAULT NULL,
+PRIMARY KEY ('customer_id'),
+KEY ('product_id'),
+CONSTRAINT FOREIGN KEY ('product_id') REFERENCES 'products' ('product_id')
+)ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
+
+INSERT INTO 'customers' VALUES
+(000001, 'Peter', 'Parker', '20 Ingram Street', 'Forest Hills', 'Queens','Ny', '11375', '(718) 328 - 8814', '123456' );
+
+
+DROP TABLE IF EXISTS 'tickets';
+CREATE TABLE 'tickets' (
+'ticket_id' BIGINT(255) NOT NULL AUTO_INCREMENT,
+'ticket_tracking_number' VARCHAR(255) NOT NULL AUTO_INCREMENT,
+'customer_id' BIGINT(255) DEFAULT NULL,
+'created_date' datetime(6) DEFAULT NULL,
+'status' ENUM ('ready', ' build-in-progress', 'build-complete', 'ready-for-qa', 'qa-in-progress', 'qa-needs-edits', 'qa-edits-complete', 'qa-complete', 'published'),
+'due_date' datetime(6) DEFAULT NULL,
+'priority' ENUM ('low', 'medium', 'high') ,
+'category' ENUM ('new-build', 'revisions', 'post-publish'),
+'description' VARCHAR(255) DEFAULT NULL,
+'last_updated' datetime(6) DEFAULT NULL,
+'employee_id' BIGINT(255) DEFAULT NULL,
+PRIMARY KEY (‘ticket_id’)
+KEY ('employee_id'),
+CONSTRAINT FOREIGN KEY ('employee_id') REFERENCES 'employees' ('employee_id')
+)ENGINE = InnoDB AUTO_INCREMENT = 2 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
+
+
+DROP TABLE IF EXISTS 'employees';
+CREATE TABLE 'employees' (
+'employee_id' BIGINT(255) NOT NULL AUTO_INCREMENT,
+'employee_first_name' VARCHAR(255) DEFAULT NULL,
+'employee_last_name' VARCHAR(255) DEFAULT NULL,
+'role' ENUM ('developer', 'qa_agent', 'admin'),
+'ticket_id' BIGINT(255) NOT NULL,
+PRIMARY KEY (‘employee_id’),
+KEY ('ticket_id'),
+CONSTRAINT FOREIGN KEY ('ticket_id') REFERENCES 'tickets' ('ticket_id')
+)ENGINE = InnoDB AUTO_INCREMENT = 2 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
+
+
+  DROP TABLE IF EXISTS 'products';
+CREATE TABLE 'products' (
+'product_id' BIGINT(255) NOT NULL AUTO_INCREMENT,
+'plan' ENUM ('standard', 'premium', 'woo-commerce'),
+'domain' VARCHAR(255) DEFAULT NULL,
+'renewal_date' datetime(6) DEFAULT NULL,
+'date_purchaseds' datetime(6) DEFAULT NULL,
+PRIMARY KEY ('product_id')
+)ENGINE = InnoDB AUTO_INCREMENT = 2 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
+
+
+
+
