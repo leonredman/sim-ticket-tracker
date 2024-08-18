@@ -1,2 +1,4 @@
-package com.simTrak.springbootlibrary.entity;public class Product {
+package com.simTrak.springbootlibrary.entity;
+
+public class Product {
 }

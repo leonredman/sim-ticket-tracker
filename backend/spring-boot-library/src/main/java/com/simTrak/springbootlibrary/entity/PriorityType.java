@@ -1,4 +1,5 @@
 package com.simTrak.springbootlibrary.entity;
 
-public enum Priority {
+public enum PriorityType {
+    low, medium, high
 }

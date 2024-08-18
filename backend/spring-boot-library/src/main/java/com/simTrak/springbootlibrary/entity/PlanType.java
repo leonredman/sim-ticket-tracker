@@ -1,4 +1,5 @@
 package com.simTrak.springbootlibrary.entity;
 
-public enum Plan {
+public enum PlanType {
+    standard, premium, woo_commerce
 }
